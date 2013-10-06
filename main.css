@@ -1,0 +1,79 @@
+html{
+	background: #3f4c6b;
+font-family: 'Open Sans', sans-serif;
+}
+fieldset{
+	border: none;
+}
+input{
+	width: 280px;
+	height: 20px;
+	float: right;
+}
+span{
+	float:left;
+	font-weight: 800;
+	color: #232a3b;
+}
+select{
+	float: right;
+	height: 23px;
+	margin-top: 12px;
+	width: 286px;
+}
+#wrapper{
+	min-height:800px;
+	width: 900px;
+	margin: 0 auto;
+	background: #5b6e9b;
+	border: transparent;
+	border-radius: 25px;
+	margin-top: 22px;
+}
+#title{
+	width: 800px;
+	margin: 0 auto;
+	padding: 5px;
+	text-align: center;
+	color: #232a3b;
+	font-size: 80px;
+	font-weight: 800;
+	text-shadow: rgba(63, 76, 107, .3) -4px 1px;
+}
+#inputs{
+	text-align: center;
+
+}
+#goButton{
+	margin-top: 15px;
+	color: #232a3b;
+	font-weight: 800;
+}
+#inputs{
+	color: rgba(63, 76, 107);
+	font-size: 20px;
+	padding: 5px;
+	line-height: 1.9em;
+
+}
+
+#convert{
+
+	width: 700px;
+	box-shadow: 2px 2px 2px 2px #fff;
+	margin: 0 auto;
+		box-shadow: 1px 0px 5px 8px #8DA5DD;
+	margin-top: 25px;
+	}
+.formComponent{
+	float: left;
+	clear: left;
+	width: 100%;
+	padding: 2px;
+}
+#results{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 40px;
+		color: #232a3b;
+}
