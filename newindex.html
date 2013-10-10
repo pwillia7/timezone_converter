@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Timezone Converter</title>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Timezone Converter">
+    <meta name="author" content="Patrick Williams">
+     <link rel="shortcut icon" href="images/favicon.png">
+    <!-- Custom styles for this template -->
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" media="screen">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->  
+  </head>
+  <body>
+
+
+
+<div class="container">
+  <div id="timeInput" style="display: none;"></div>
+  <div id="ampmController" style="display:none;"></div>
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Timezone Converter</h3>
+      </div>
+<div class="alert alert-info jumbotron" style="display: none;">Use the radio buttons to switch to converting by Timezone (ex. CST to GMT) </div>
+   
+      <div class="jumbotron">
+        <h1>Timezone Converter</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" id="converterButton" href="#" onclick="makeToggle()">Let's Go!</a></p>
+      </div>
+
+<div class="jumbotron" style="display: none;">
+  <div id="results"></div>
+  <div id="hideOnConvert">
+    <div class="row">
+      <div class="span9">
+        <span class="helperText">When it's</span>
+        <div class="input-group">
+          <div id="timeButtonDiv" class="input-group input-group-sm">
+            <div class="input-group-btn">
+              <button id="timeButton" value="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Time
+                <span class="caret"></span>
+              </button>
+              <ul id="timeDropdown" class="dropdown-menu">
+                <li><a class="timedDropdownOption" href="#">12</a></li>
+                <li><a class="timedDropdownOption" href="#">1</a></li>
+                <li><a class="timedDropdownOption" href="#">2</a></li>
+                <li><a class="timedDropdownOption" href="#">3</a></li>
+                <li><a class="timedDropdownOption" href="#">4</a></li>
+                <li><a class="timedDropdownOption" href="#">5</a></li>
+                <li><a class="timedDropdownOption" href="#">6</a></li>
+                <li><a class="timedDropdownOption" href="#">7</a></li>
+                <li><a class="timedDropdownOption" href="#">8</a></li>
+                <li><a class="timedDropdownOption" href="#">9</a></li>
+                <li><a class="timedDropdownOption" href="#">10</a></li>
+                <li><a class="timedDropdownOption" href="#">11</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div>
+          <span id="ampm" class="input-group-addon">
+            <div class="btn-group btn-group-xs">
+              <button type="button" class="btn btn-default ampm">AM</button>
+              <button type="button" class="btn btn-default ampm">PM</button>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span9">
+        <span class="helperText">in</span>
+        <div class="input-group input-group-sm">
+          <input id="firstCity" type="text" class="form-control" placeholder="City">
+          <span class="input-group-addon">
+            <div class="btn-group btn-group-xs globecon">
+              <button type="button" class="btn btn-default globe">
+                <span class="glyphicon glyphicon-globe"></span>
+              </button>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span9">
+        <span class="helperText">What time will it be in</span>
+        <div class="input-group input-group-sm">
+          <input id="secondCity" type="text" class="form-control" placeholder="City"> 
+          <span class="input-group-addon">
+            <div class="btn-group btn-group-xs globecon">
+              <button type="button" class="btn btn-default globe">
+                <span class="glyphicon glyphicon-globe"></span>
+              </button>
+            </div>
+          </span>
+       </div>
+      </div>
+    </div>
+    <p><a id="goButton" class="btn btn-lg btn-success" onclick="search()">Convert</a></p>
+  </div>
+</div>
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+        </div>
+      </div>
+
+  <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+        </div>
+      </div>  <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+        </div>
+      </div> 
+      <div class="footer">
+        <p><a href="http://pwillia7.github.com">Patrick Williams</a></p>
+      </div>
+
+    </div> <!-- /container -->
+ 
+
+
+
+<!----
+
+
+    <div id="wrapper">
+        <div id="header">
+            <div id="navigation">
+            </div>
+            <div id="title">
+                Timezone Converter
+            </div>
+            <hr>
+        </div>
+        <div id="inputs">
+
+
+
+
+
+
+<div id="goButton">GO</div>
+        </div> 
+        <div id="results">
+        </div>
+    </div>
+-->
+    <script> 
+
+window.onload = function(){
+  document.getElementById("ampm").children[0].children[0].onclick = function() {
+        document.getElementById("ampmController").innerHTML = "AM";
+  };
+  document.getElementById("ampm").children[0].children[1].onclick = function() {
+        document.getElementById("ampmController").innerHTML = "PM";
+  };
+  var timeDiv = document.getElementById('timeDropdown');
+  for(var i = 0; i < timeDiv.children.length; i++){
+      var thisDiv = timeDiv.children[i].children[0];
+      thisDiv.setAttribute("onclick","document.getElementById(\"timeInput\").innerHTML = document.getElementById('timeDropdown').children["+i+"].children[0].innerHTML; document.getElementById(\"timeButton\").innerHTML = document.getElementById('timeDropdown').children["+i+"].children[0].innerHTML;"); 
+    }
+}
+
+document.getElementById("goButton").onclick = function() {
+        search();
+    };
+
+    $('html').bind('keyup', function(e) {
+
+    if ( e.keyCode === 13 ) {
+        search();
+    }
+});
+    var input = document.getElementById('firstCity');
+    options = {};
+    var autocomplete = new google.maps.places.Autocomplete(input, options);
+    var input2 = document.getElementById('secondCity');
+    var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
+    function makeToggle (){
+
+    $(".jumbotron").toggle();   
+
+    }
+    $('.dropdown-toggle').dropdown();
+$( ".ampm" ).click(function() {
+  $( this ).toggleClass("clickampm");
+
+});
+    </script>
+
+  </body>
+</html>

@@ -1,79 +1,57 @@
 html{
-	background: #3f4c6b;
-font-family: 'Open Sans', sans-serif;
+	background: black;
 }
-fieldset{
-	border: none;
-}
-input{
-	width: 280px;
-	height: 20px;
-	float: right;
-}
+
 span{
-	float:left;
-	font-weight: 800;
-	color: #232a3b;
+	border: none !important;
 }
-select{
+#timeButton{
 	float: right;
-	height: 23px;
-	margin-top: 12px;
-	width: 286px;
-}
-#wrapper{
-	min-height:800px;
-	width: 900px;
-	margin: 0 auto;
-	background: #5b6e9b;
-	border: transparent;
-	border-radius: 25px;
-	margin-top: 22px;
-}
-#title{
-	width: 800px;
-	margin: 0 auto;
-	padding: 5px;
-	text-align: center;
-	color: #232a3b;
-	font-size: 80px;
-	font-weight: 800;
-	text-shadow: rgba(63, 76, 107, .3) -4px 1px;
-}
-#inputs{
-	text-align: center;
+	height: 48px;
+	width: 90%;
+	padding-right: 0 !important;
+	margin-right: 9px;
+
 
 }
-#goButton{
-	margin-top: 15px;
-	color: #232a3b;
-	font-weight: 800;
-}
-#inputs{
-	color: rgba(63, 76, 107);
-	font-size: 20px;
-	padding: 5px;
-	line-height: 1.9em;
-
-}
-
-#convert{
-
-	width: 700px;
-	box-shadow: 2px 2px 2px 2px #fff;
-	margin: 0 auto;
-		box-shadow: 1px 0px 5px 8px #8DA5DD;
-	margin-top: 25px;
-	}
-.formComponent{
+.helperText{
 	float: left;
-	clear: left;
-	width: 100%;
-	padding: 2px;
 }
-#results{
-	text-align: center;
-	margin-top: 30px;
-	font-size: 40px;
-		color: #232a3b;
+.form-control{
+	float: right;
+	width: 90% !important;
+		height: 48px !important;
+		margin-bottom: 1.5% !important;
+}
+#timeButtonDiv{
+	float: right;
+
+			margin-bottom: 1.5%;
+		width: 90%;
+}
+#ampm{
+	padding-top: 0;
+	padding-right: :;px;
+	padding-bottom: 9px;
+	padding-left: 7px;
+}
+.glyphicon-globe{
+	padding-top: 2px !important;
+	width: 30px;
+}
+.globe{
+	height: 40px;
+}
+.globecon{
+	margin-bottom: 12px;
+}
+.input-group-addon{
+	padding-top: 0px;
+}
+#timeDropdown{
+	left: 71px;
+}
+.clickampm{
+box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+color: #333333;
 }
