@@ -57,9 +57,12 @@ function search() {
 									if(totalOffsetTime >= 24){
 										answer = (totalOffsetTime - 24) + " AM next day";
 									} else {
-										if (totalOffsetTime >= 12){
+										if (totalOffsetTime > 12){
 											answer = (totalOffsetTime - 12) + " PM";
 										} else {
+											if(totalOffsetTime === 12){
+												answer = "12 PM";
+											} else
 											answer = totalOffsetTime + " AM";
 										}
 									}
