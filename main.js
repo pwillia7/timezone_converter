@@ -1,26 +1,39 @@
 
 function search() {
+	var UTCs = ["UTC-12","UTC-11","UTC-10","UTC-09:30","UTC-09","UTC-08","UTC-07","UTC-06","UTC-05","UTC-04:30","UTC-04","UTC-03:30","UTC-03","UTC-02:30","UTC-02","UTC-01","UTC","UTC+01","UTC+02","UTC+03","UTC+03:30","UTC+04","UTC+04:30","UTC+05","UTC+05:30","UTC+05:45","UTC+06","UTC+06:30","UTC+07","UTC+08","UTC+08:45","UTC+09","UTC+09:30","UTC+10","UTC+10:30","UTC+11","UTC+11:30","UTC+12","UTC+12:45","UTC+13","UTC+13:45","UTC+14"];
+	var UTCCities = ["Baker Island","Jarvis Island","Honolulu","Marquesas Islands","Anchorage","Los Angeles","Phoenix","Chicago","New York","Caracas","Santiago","St. John's","Buenos Aires","Newfoundland","Fernando de Noronha","ittoqqortoormiit","London","Belgrade","Athens","Nairobi","Tehran","Dubai","Kabul","Karachi","Dehli","Kathmandu","Dhaka","Yangon","Jakarta","Perth","Eucla","Tokyo","Adelaide","Canberra","Lord Howe Island","Vladivostok","Norfolk Island","Auckland","Chatham Islands","Samoa","Chatham Islands","Line Islands"];
+	var firstCity, secondCity;
 	var hiddenTimeDiv = document.getElementById("timeInput").innerHTML;
 	var hiddenampm = document.getElementById("ampmController").innerHTML;
     var inputTime = 0;
-    console.log(inputTime);
-	var firstCity = encodeURIComponent(document.getElementById("firstCity").value);
-	var secondCity = encodeURIComponent(document.getElementById("secondCity").value);
 	var date = new Date();
 	var currentTime = date.getTime();
 	var currentOffset = date.getTimezoneOffset() * 60000;
 	currentTime = (currentTime + currentOffset)/1000;
-
+	//determine input values
+	if(document.getElementsByClassName('firstCityInputs')[0].style.display === 'none'){
+		firstCity = document.getElementById('timezoneButton').value.substr(document.getElementById('timezoneButton').value.indexOf('UTC'),12);
+		var currentUTC = UTCs.indexOf(firstCity);
+		firstCity = UTCCities[currentUTC];
+		console.log(firstCity);
+	} else {
+	firstCity = encodeURIComponent(document.getElementById("firstCity").value);
+	}
+	if(document.getElementsByClassName('secondCityInputs')[0].style.display === 'none'){
+		secondCity = document.getElementById('timezoneButton2').value.substr(document.getElementById('timezoneButton2').value.indexOf('UTC'),12);
+		var currentUTC2 = UTCs.indexOf(secondCity);
+		secondCity = UTCCities[currentUTC2];
+		console.log(secondCity);
+	} else {
+		secondCity = encodeURIComponent(document.getElementById("secondCity").value);
+	}
 	//determine Time from hidden inputs
 	if(hiddenTimeDiv === "12" && hiddenampm === "AM") {
-		console.log("12 AM!");
 		inputTime = 0; }
 		else if (hiddenampm === "AM" || (hiddenTimeDiv === "12" && hiddenampm === "PM")){
-			console.log("12 PM or other AMs!");
 			inputTime = hiddenTimeDiv * 3600000; }
 			else{
 				inputTime = (parseInt(hiddenTimeDiv) + 12) * 3600000;
-				console.log("XPM!");
 }
 	//begin AJAX call
 	$.ajax({
@@ -66,7 +79,6 @@ function search() {
 											answer = totalOffsetTime + " AM";
 										}
 									}
-									console.log("start erasing shit");
 									$('#hideOnConvert').hide();
 									document.getElementById("results").innerHTML= answer;
 

@@ -95,7 +95,7 @@
         </div>
       </div>
       <div  id="firstTimezone" style="display: none;" class="input-group input-group-sm firstCityInputs">
-            <input id="timezoneButton" type="text" class="typeahead form-control" placeholder="Timezone"> 
+            <input id="timezoneButton" type="text" class="typeahead" placeholder="Timezone"> 
             <span class="input-group-addon">
               <div class="btn-group btn-group-xs globecon">
                <button type="button" class="btn btn-default globe globe1">
@@ -120,7 +120,7 @@
           </span>
        </div>
       <div id="secondTimezone" style="display: none;" class="input-group input-group-sm secondCityInputs">
-            <input id="timezoneButton2" type="text" class="typeahead form-control" placeholder="Timezone"> 
+            <input id="timezoneButton2" type="text" class="typeahead" placeholder="Timezone"> 
             <span class="input-group-addon">
               <div class="btn-group btn-group-xs globecon">
                <button type="button" class="btn btn-default globe globe2">
@@ -200,7 +200,7 @@ window.onload = function(){
 
 $('.typeahead').typeahead({
 name: 'Timezone',
-prefetch: 'timezones.json',
+prefetch: 'notes.json',
 limit: 10
 });
 document.getElementById("goButton").onclick = function() {
@@ -229,6 +229,8 @@ document.getElementById("goButton").onclick = function() {
        document.getElementById("results").innerHTML = null;
        document.getElementById("timeButton").innerHTML = "Time";
        $('.btn').removeClass('clickampm');
+       document.getElementById("firstCity").value = null;
+       document.getElementById("secondCity").value = null;
     }
     $('.dropdown-toggle').dropdown();
 $( ".ampm" ).click(function() {

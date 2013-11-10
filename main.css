@@ -58,10 +58,13 @@ color: #333333;
 #timezoneButton{
 		float: right;
 	height: 48px;
-	width: 90%;
+	width: 100%;
 	padding-right: 0 !important;
-	margin-right: 17px;
-	background: #fff !important;
+	margin-right: 0px;
+	background: #fff;
+		border: 1px solid #cccccc;
+			padding-left: 5px;
+			color: #555555;
 }
 .tt-hint{
 	display: none !important;
@@ -69,10 +72,23 @@ color: #333333;
 #timezoneButton2{
 		float: right;
 	height: 48px;
+	width: 100%;
+	padding-right: 0 !important;
+	margin-right: 0px;
+	background: #fff;
+	border: 1px solid #cccccc;
+	padding-left: 5px;
+	color: #555555;
+
+}
+.twitter-typeahead{
+			float: right;
+	height: 48px;
 	width: 90%;
 	padding-right: 0 !important;
 	margin-right: 17px;
-	background: #fff !important;
+	background: #fff;
+	font-size: 12px;
 
 }
 #goBack{
@@ -126,5 +142,5 @@ color: #333333;
 
 .tt-suggestion p {
   margin: 0;
-  font-size: 18px;
+  font-size: inherit;
 }
