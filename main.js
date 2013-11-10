@@ -91,4 +91,6 @@ function search() {
 			});
 		}
 	});
+document.getElementById('timezoneButton').value = '';
+document.getElementById('timezoneButton2').value = '';
 }
