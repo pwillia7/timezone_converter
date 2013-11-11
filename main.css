@@ -32,6 +32,7 @@ span{
 .globe{
  height: 40px;
  width: 42px;
+ padding: 0;
 }
 .globecon{
  margin-bottom: 12px;
@@ -136,10 +137,10 @@ span{
 	max-width: 1170px;
 }
 .glyphicon{
-	font-size: 12px;
-	padding: 0;
+	font-size: 12px !important;
+	padding: 0 !important;
 }
-.ampm button{
-	font-size: 12px;
-	padding: 0;
+.ampm{
+	font-size: 12px !important;
+	padding: 0 !important;
 }
