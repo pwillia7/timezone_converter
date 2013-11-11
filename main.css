@@ -31,16 +31,15 @@ span{
 }
 #ampm{
 	padding-top: 0;
-	padding-right: :;px;
-	padding-bottom: 9px;
-	padding-left: 7px;
+
 }
 .glyphicon-globe{
 	padding-top: 2px !important;
-	width: 30px;
+
 }
 .globe{
 	height: 40px;
+	width: 42px;
 }
 .globecon{
 	margin-bottom: 12px;
