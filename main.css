@@ -112,7 +112,6 @@ span{
   display: block;
   padding: 3px 20px;
 }
-
 .tt-suggestion.tt-is-under-cursor {
   color: #fff;
   background-color: #0081c2;
@@ -137,8 +136,10 @@ span{
 	max-width: 1170px;
 }
 .glyphicon{
-	font-size: 12px !important;
+	font-size: 12px;
+	padding: 0;
 }
 .ampm{
-		font-size: 12px !important;
+	font-size: 12px;
+	padding: 0;
 }
