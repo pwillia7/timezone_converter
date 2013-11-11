@@ -144,3 +144,6 @@ color: #333333;
   margin: 0;
   font-size: inherit;
 }
+.container{
+	max-width: 1170px;
+}
