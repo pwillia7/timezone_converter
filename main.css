@@ -26,6 +26,12 @@ span{
 #ampm{
  padding-top: 0;
 }
+.firstCityInpouts{
+	display:block;
+}
+.secondCityInpouts{
+	display:block;
+}
 .glyphicon-globe{
  padding-top: 2px !important;
 }
