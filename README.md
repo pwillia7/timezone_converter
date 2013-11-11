@@ -1,9 +1,10 @@
 This page will help you easily convert the time in a specific location to a different
 location.
 
-Recently added bootstrap styling and am working on getting the timezone inputs to
-display correctly. The json object of timezones needs to be curated also. Will work
-on getting the timezone input to function correctly next. 
+Timezone functionality added. Styling still needs to be updated a bit. The github
+Preview does not display the right styling for some reason. I'm blaming them for now.
+I've also had issues with the preview in Chrome.
+
 
 Check out the preview here:
 http://htmlpreview.github.io/?https://github.com/pwillia7/timezone_converter/blob/master/index.html
