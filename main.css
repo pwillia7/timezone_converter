@@ -1,13 +1,39 @@
 @charset "UTF-8";
+.header h3{
+  padding-bottom: 0;
+}
+.header h5{
+  margin-top: 0;
+}
 span{
  border: none !important;
-}
+}/*
 #timeButton{
  float: right;
  height: 48px;
  width: 90%;
  padding-right: 0 !important;
  margin-right: 9px;
+}*/
+#timeButton{
+height: 45px;
+margin-bottom: 15px;
+width: 100%;
+font-size: 14px;
+color: darkgray;
+float: right;
+text-align: left;
+padding-left: 12px;
+}
+.tb{
+height: 45px;
+margin-bottom: 15px;
+width: 91.5%;
+font-size: 14px;
+color: darkgray;
+float: right;
+text-align: left;
+padding-left: 12px;
 }
 .helperText{
  float: left;
@@ -16,7 +42,7 @@ span{
  float: right;
  width: 90% !important;
  height: 48px !important;
- margin-bottom: 1.5% !important;
+
 }
 #timeButtonDiv{
  float: right;
@@ -47,11 +73,13 @@ span{
  padding-top: 0px;
 }
 #timeDropdown{
- left: 71px;
+ left: 455px;
+ text-align: center;
 }
 .clickampm{
- box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+ box-shadow: 1px 4px 18px rgba(0, 0, 0, 0.525) inset;
  color: #333333;
+
 }
 #timezoneButton{
  float: right;
@@ -63,9 +91,13 @@ span{
  border: 1px solid #cccccc;
  padding-left: 5px;
  color: #555555;
+ padding-left: 12px;
 }
 .tt-hint{
  display: none !important;
+}
+.timezone{
+  background: #fff !important;
 }
 #timezoneButton2{
  float: right;
@@ -77,7 +109,12 @@ span{
  border: 1px solid #cccccc;
  padding-left: 5px;
  color: #555555;
+ padding-left: 12px;
 }
+.twitter-typeahead{
+  width: 100%;
+}
+/*
 .twitter-typeahead{
  float: right;
  height: 48px;
@@ -86,9 +123,10 @@ span{
  margin-right: 17px;
  background: #fff;
  font-size: 12px;
-}
+}*/
 #goBack{
  float: left;
+ margin-left: 12px;
 }
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
@@ -152,4 +190,11 @@ span{
 	width: 38px;
 	border-radius: 0 !important;
 	float: right !important;
+}
+.padUp{
+  padding-top: 30px;
+}
+#goButton{
+  float: right;
+  margin-right: 20px;
 }
