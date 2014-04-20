@@ -52,12 +52,7 @@ padding-left: 12px;
 #ampm{
  padding-top: 0;
 }
-.firstCityInpouts{
-	display:block;
-}
-.secondCityInpouts{
-	display:block;
-}
+
 .glyphicon-globe{
  padding-top: 2px !important;
 }
@@ -197,4 +192,7 @@ padding-left: 12px;
 #goButton{
   float: right;
   margin-right: 20px;
+}
+.col-md-1.static{
+  position: static;
 }
