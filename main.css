@@ -196,3 +196,33 @@ padding-left: 12px;
 .col-md-1.static{
   position: static;
 }
+@media screen and (max-width: 980px) {
+  .row div{
+    position: static;
+  }
+  .tb{
+    width: 65%;
+    float:left;
+  }
+  #timeDropdown{
+    left: 179px;
+    top: 346px;
+  }
+  #ampm{
+    padding-top: 0;
+float: right;
+padding-left: 0;
+
+  }
+  .form-control{
+    float: left;
+    width: 69% !important;
+    margin-left: 10px;
+  }
+  .twitter-typeahead {
+width: 94%;
+float: left;
+margin-left: -75px;
+
+}
+  }
