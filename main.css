@@ -16,8 +16,7 @@ span{
  margin-right: 9px;
 }*/
 #timeButton{
-height: 45px;
-margin-bottom: 15px;
+
 width: 100%;
 font-size: 14px;
 color: darkgray;
@@ -26,33 +25,32 @@ text-align: left;
 padding-left: 12px;
 }
 .tb{
-height: 45px;
-margin-bottom: 15px;
-width: 91.5%;
+margin-left: -2%;
+width: 105.33%;
 font-size: 14px;
 color: darkgray;
-float: right;
 text-align: left;
 padding-left: 12px;
 }
-.helperText{
- float: left;
+.firstCityInputs,.secondCityInputs{
+  height: 50px;
 }
-.form-control{
- float: right;
- width: 90% !important;
- height: 48px !important;
+input.form-control{
+
+ width: 90%;
+ height: 50px;
 
 }
 #timeButtonDiv{
- float: right;
+ float: left;
  margin-bottom: 1.5%;
  width: 90%;
 }
 #ampm{
- padding-top: 0;
+ margin-right: 11px;
+ float: right;
 }
-
+/*
 .glyphicon-globe{
  padding-top: 2px !important;
 }
@@ -63,39 +61,38 @@ padding-left: 12px;
 }
 .globecon{
  margin-bottom: 12px;
-}
+}*/
 .input-group-addon{
  padding-top: 0px;
 }
 #timeDropdown{
- left: 455px;
+ left: 62%;
  text-align: center;
 }
 .clickampm{
  box-shadow: 1px 4px 18px rgba(0, 0, 0, 0.525) inset;
  color: #333333;
 
-}
+}/*
 #timezoneButton{
- float: right;
- height: 48px;
- width: 100%;
- padding-right: 0 !important;
+
+ height: 50px;
+ width: 90%;
  margin-right: 0px;
  background: #fff;
  border: 1px solid #cccccc;
  padding-left: 5px;
  color: #555555;
  padding-left: 12px;
-}
+}*/
 .tt-hint{
  display: none !important;
 }
 .timezone{
   background: #fff !important;
-}
+}/*
 #timezoneButton2{
- float: right;
+
  height: 48px;
  width: 100%;
  padding-right: 0 !important;
@@ -105,9 +102,10 @@ padding-left: 12px;
  padding-left: 5px;
  color: #555555;
  padding-left: 12px;
-}
+}*/
 .twitter-typeahead{
   width: 100%;
+  margin-bottom: -15px;
 }
 /*
 .twitter-typeahead{
@@ -126,9 +124,11 @@ padding-left: 12px;
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
   margin-bottom: 0;
+  font-size: 12px;
 }
 
 .tt-dropdown-menu {
+  font-size: 14px;
   min-width: 160px;
   margin-top: 2px;
   padding: 5px 0;
@@ -178,14 +178,14 @@ padding-left: 12px;
 .glyphicon{
 	font-size: 12px !important;
 	padding: 0 !important;
-}
+}/*
 .ampm{
 	font-size: 12px !important;
 	padding: 0 !important;
 	width: 38px;
 	border-radius: 0 !important;
-	float: right !important;
-}
+
+}*/
 .padUp{
   padding-top: 30px;
 }
@@ -196,33 +196,43 @@ padding-left: 12px;
 .col-md-1.static{
   position: static;
 }
-@media screen and (max-width: 980px) {
-  .row div{
-    position: static;
-  }
-  .tb{
-    width: 65%;
-    float:left;
-  }
-  #timeDropdown{
-    left: 179px;
-    top: 346px;
-  }
-  #ampm{
+@media screen and (max-width: 640px){
+#timeDropdown{
+  left: 44%;
+}
+ #ampm, .btn-group-sm{
     padding-top: 0;
 float: right;
 padding-left: 0;
 
   }
-  .form-control{
-    float: left;
-    width: 69% !important;
-    margin-left: 10px;
+  input.form-control{
+    width: 104%;
   }
-  .twitter-typeahead {
-width: 94%;
-float: left;
-margin-left: -75px;
 
 }
+@media screen and (max-width: 980px) and (min-width: 641) {
+
+  
+  #timeDropdown{
+    left: 75%;
+
   }
+  #ampm, .btn-group-sm{
+    padding-top: 0;
+float: right;
+padding-left: 0;
+
+  }
+  input.form-control{
+    width: 104%;
+  }
+
+  
+.globe{
+  border-radius: 0;
+  }
+}
+.row{
+margin-bottom: 12px;
+}

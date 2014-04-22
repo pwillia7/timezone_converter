@@ -72,7 +72,7 @@
             When it's
           </span>
         </div>
-      <div class="col-md-8">
+      <div class="col-md-7">
         
         <div class="btn-group tb" >
           <button id="timeButton" value="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -145,17 +145,15 @@
         </div>
           
       </div>
-      <div class="col-md-1">
-        <span id="ampm" class="input-group-addon">
-          <div class="btn-group btn-group-lg">
-            <button type="button" class="btn btn-default ampm">
+      <div class="col-md-2">
+          <div id="ampm" class="btn-group btn-group-sm">
+            <button id="AM" type="button" class="btn btn-default ampm">
               AM
             </button>
-            <button type="button" class="btn btn-default ampm">
+            <button id="PM" type="button" class="btn btn-default ampm">
               PM
             </button>
           </div>
-        </span>
       </div>
     </div>
     <div class="row">
@@ -166,24 +164,23 @@
       </div>
       
       <div class="col-md-8">
-        <div class="firstCityInputs">
-          <input id="firstCity" type="text" class="form-control" placeholder="City">
-        </div>  
+
+          <input id="firstCity" type="text" class="form-control firstCityInputs" placeholder="City">
         <div class="firstCityInputs" style="display: none;">
           <input id="timezoneButton" type="text" class=" typeahead form-control timezone" placeholder="Timezone">
-          
-        </div>
+          </div>
+
         
       </div>
       <div class="col-md-1 static">
-        <span class="input-group-addon">
-          <div class="btn-group-xs globecon">
-            <button type="button" class="btn btn-default btn-xs globe globe1">
+       
+          <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-default globe globe1">
               <span class="glyphicon glyphicon-globe">
               </span>
             </button>
           </div>
-        </span>
+       
       </div>
     </div>
     <div class="row">
@@ -194,22 +191,22 @@
       </div>
       <div class="col-md-8">
         <input id="secondCity" type="text" class="form-control secondCityInputs" placeholder="City">
-        
-        
         <div class="secondCityInputs" style="display: none;">
-          <input id="timezoneButton2" type="text" class=" typeahead form-control timezone" placeholder="Timezone">
+        
+
+          <input id="timezoneButton2" type="text" class="typeahead form-control timezone" placeholder="Timezone">
           
           </div>
       </div>
       <div class="col-md-1 static">
-        <span class="input-group-addon">
-          <div class="btn-group btn-group-xs globecon">
+
+          <div class="btn-group btn-group-sm">
             <button type="button" class="btn btn-default globe globe2">
               <span class="glyphicon glyphicon-globe">
               </span>
             </button>
           </div>
-        </span>
+      
       </div>
     </div>
     
@@ -284,11 +281,11 @@
     <script> 
       
       window.onload = function(){
-        document.getElementById("ampm").children[0].children[0].onclick = function() {
+        document.getElementById("AM").onclick = function() {
           document.getElementById("ampmController").innerHTML = "AM";
         }
           ;
-        document.getElementById("ampm").children[0].children[1].onclick = function() {
+        document.getElementById("PM").onclick = function() {
           document.getElementById("ampmController").innerHTML = "PM";
         }
           ;
